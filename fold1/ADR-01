@@ -1,0 +1,65 @@
+### 1. Background: what are you talking about and why ?
+
+ During the past years JET has grown very quickly both organically and through merge and acquisitions.  As a result we now have four data warehouses serving the business.  With the last year changes on data organisation and subsequent decision to consolidate all data platforms into GCP we now have, or are very close to having, all 7 data warehouses  running on GCP BigQuery.  Current data warehouses are : 
+
+- DWH : main JET data warehouse currently being migrated from AWS to GCP. It supports all corporate financial reporting, marketing operations,  part of logistics operations,  customer service operations, etc. 
+- OpenSource: legacy JE data warehouse. Still heavily used to support UK business and several areas of Product Analytics. 
+- MenuLog: built by team in Australia and 100% aligned with AU/NZ business.
+- Skip : built by Canadian analytics team and 100% aligned with CA business.
+- 10bis: Production tables (including ones used by JetPay are on top of Azure. Some of the data is ingested to RedShift and exists in our DWH; some business logics are still not modelled.
+- JE for business: Data lives on top of a different BQ instance than the global one (we don’t have visibility to it). They’re using DBT for modelling and Looker for visualisation.
+
+ Being close to having all data warehouses running on GCP Data Platform we’re now approaching the next step on our journey : consolidate all data warehouses into a single one. We also want to be sure it will be future proof and take the opportunity to remove some painful tech debt!  This is not an easy task so we need to approach it carefully and well prepared. 
+ In order to set us on the right path we would like to start this new challenge with a one week workshop to discuss and define ‘JET new generation Data Warehouse’. This week is planned to take place in the second half of September.  During this week we plan to bring all experts and main stakeholders together to discuss, agree and create a roadmap that will guide us through current and future states.  
+ This document is an effort to bring together all necessary context, constraints and requirements to guide discussions during the workshop.
+
+
+### 2.Current Conditions 
+
+
+
+
+
+
+
+### 3. Goals 
+
+
+
+**The constraints are:**
+
+- JET is built on top of Merger & Acquisitions. Business processes are not always consolidated globally at the moment and they might never be. So JET data warehousing strategy MUST couple  ‘Single Source of Truth’ DNA vision with  market and business specific processes to co-exist together;
+- M&A strategy is a fact in the delivery industry. New business can be added to the group. Existing businesses might be sold to increase cash flow. Data Warehouse MUST NOT need redesign after each merge or acquisition, or any kind of business pivot.
+- DNA Target Operating Model is Hub & Spoke with clear distinction between Capability and Contextual teams.  This is important when one takes Conways’s law into account. So JET data warehousing design SHOULD fit DNA target operating model and team structure. 
+- JET's core business is logistics and not Weapons, Oil & Gas or Banking (aka most profitable industries in the world ). As a matter of fact logistics is a tough sector with fierce competition and small profit margins. So we MUST be extremely cost efficient to succeed !
+
+
+**Requirements:**
+
+- Scalability, performance and efficiency:  the data warehouse should be able to handle the increasing volume of data. Design should optimise storage and processing costs;
+- Monitoring and quality: the data warehouse should implement monitoring and logging mechanisms to track data warehouse performance and query optimization. It should be fully integrate with the Data Quality Framework;
+- Data Consolidation and standardisation : The data warehouse should provide a unified view of your business data by consolidating data from different sources. It should incorporate robust data integration processes to ensure consistency and accuracy across diverse data sets.
+- Data integration : The new data warehouse should support integration with various data sources, including JET existing diverse e-commerce platforms. It should be capable of ingesting structured and unstructured data from multiple systems and databases, enabling a comprehensive view of your company's operations.
+- Data Quality: The new DWH should enable data quality measures and toolings. It should be robust, trusted, and reliable.
+- Data Compatibility: The new DWH should comply with latest DPO and infosec regulations, including data latency and reliability. 
+- Data Flexibility: The new DWH will need to be able to process semi-structured data, JSON in particular. That also means being able to support the future new attributes being added. 
+- Agility: teams owning new DWH should be able to deliver new features quickly and autonomously  
+- Engineering Practices: The DWH teams and/or teams donating code to the DWH should apply to engineering best practices such as version control, CI/CD, documentation, and such. 
+
+
+
+### 4. Analysis: why does the problem or need exist ?
+
+
+### 5. Recommendations: What do you propose and why ?
+
+
+
+### 6. Plan: How will you implement ?
+
+
+
+### 7. Follow up
+
+
+
