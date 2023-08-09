@@ -1,0 +1,3 @@
+### 1. Background: what are you talking about and why ?
+
+ During the past years JET has grown very quickly both organically and through merge and acquisitions.  As a result we now have four data warehouses serving the business.  With the last year changes on data organisation and subsequent decision to consolidate all data platforms into GCP we now have, or are very close to having, all 7 data warehouses  running on GCP BigQuery.  Current data warehouses are : 
